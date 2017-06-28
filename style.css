@@ -1,0 +1,379 @@
+*{
+  box-sizing: border-box;
+  color: #2C3E50;
+  font-family: "Roboto", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+html, body, section {
+  height: 100%;
+  margin: 0;
+}
+
+.hidden{
+  opacity: 0 !important;
+  height: 0 !important;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+.type{
+  -webkit-animation: type 4s steps(60, end); 
+  animation: type 4s steps(60, end); 
+}
+
+
+/* Animation */
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes breathe {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  35% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+} 
+
+/* Standard syntax */ 
+@keyframes breathe {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  35% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(15);
+    transform: scale(15);
+  }
+}
+
+@-webkit-@keyframes scaleUp {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  100% {
+    -webkit-transform: scale(15);
+    transform: scale(15);
+  }
+}
+
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+
+@-webkit-@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+
+  60% {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+
+/* Pattern styles */
+#page1 {
+  display: flex;
+  height: 100%;
+  opacity: 1;
+}
+
+
+#left, #right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+#left{
+  background-color: #AC4759;
+}
+
+#right{
+  background: url("/assets/banner.png") no-repeat;
+  background-size: cover;
+  background-position: right center;
+}
+
+#face{
+  position: absolute;
+  top: 5%;
+  right: 10%;
+}
+
+
+#face span{
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 600;
+  color: #AC4759;
+  display: block;
+}
+
+#face img{
+  width: 100px;
+  height: auto;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+#face #peekaboo{
+  height: 0;
+  opacity: 0;
+  color: #2C3E50;
+  font-size: 12px;
+  -webkit-transition: opacity 0.15s, height 0.5s;
+  transition: opacity 0.15s, height 0.5s;
+}
+
+#face:hover #peekaboo{
+  height: 18px;
+  opacity: 1;
+  -webkit-transition: opacity 0.15s, height 0.5s;
+  transition: opacity 0.15s, height 0.5s;
+}
+
+#logo{
+  height: 150px;
+  width: 150px;
+  border-radius: 150px;
+  background-color: white;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left:-75px;
+  margin-top:-75px; 
+  text-align: center;
+  -webkit-animation: breathe 5s infinite; /* Safari 4.0 - 8.0 */
+  animation: breathe 5s infinite;
+  cursor: pointer;
+  -webkit-transition: all 5s;
+  transition: all 5s;
+
+}
+
+#logo.expanded{
+  -webkit-animation: scaleUp 1s forwards; /* Safari 4.0 - 8.0 */
+  animation: scaleUp 1s forwards;
+}
+
+#logo.expanded img{
+  opacity: 0;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
+}
+
+
+.stopanim{
+  -webkit-animation: none !important;
+  -moz-animation: none !important;
+  -ms-animation: none !important;
+  animation: none !important;
+}
+
+.top{
+  position: relative !important;
+  z-index: 999 !important;
+}
+
+#logo img{
+  width: 75px;
+  height: 75px;
+  margin-top: 40px;
+}
+
+#page2{
+  height: 100%;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#title{
+  font-family: "Dosis", Arial, sans-serif;
+  margin-bottom: 0px;
+  font-size: 45px;
+  font-weight: 500;
+  color: $black;
+  margin-top: 20px;
+  letter-spacing: 1px;
+
+}
+
+#subtitle{
+  font-family: "Fira Sans", Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+  margin-bottom: 45px;
+  margin-top: 10px;
+
+}
+
+
+#social{
+  margin-bottom: 50px;
+}
+
+#social a{
+   margin-right: 20px;
+}
+
+
+#social a:last-child {
+  margin-right: 0;
+}
+
+#social a img {
+  width: 25px;
+ 
+}
+
+
+#social a img:hover{
+  -webkit-animation: bounce 0.25s forwards; /* Safari 4.0 - 8.0 */
+  animation: bounce 0.25s forwards;
+}
+
+
+p{
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+#soon{
+  white-space: nowrap;
+  overflow: hidden;
+  color: #AC4759;
+  margin-top: 45px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  font-family: "Dosis", Arial, sans-serif;
+}
+
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 104px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    /* Position the tooltip text */
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -52px;
+
+    /* Fade in tooltip */
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
