@@ -273,7 +273,7 @@ html, body, section {
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  padding: 30px;
+  /*padding: 30px;*/
 }
 
 #title{
@@ -398,6 +398,10 @@ p{
 @media only screen and (max-width : 768px) {
   #page1{
     flex-direction: column;
+  }
+
+  #page2{
+    padding: 30px;
   }
 
   #title{

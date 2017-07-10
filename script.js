@@ -10,6 +10,6 @@ function expand() {
 		$('#page2').removeClass('hidden');
 		$('#page2').addClass('top');
 		$('#page2').css({"min-height": "100%", "height" : "auto"});
-	}, 1000);
+	}, 500);
 }
 
