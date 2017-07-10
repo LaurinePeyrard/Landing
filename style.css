@@ -13,6 +13,7 @@
 a{
   text-decoration: none;
   color: inherit;
+  font-weight: bold;
 }
 
 html, body, section {
@@ -169,11 +170,12 @@ html, body, section {
 }
 
 #face{
-  position: absolute;
-  top: 5%;
-  right: 10%;
+  text-align: right;
 }
 
+#face div{
+  padding-left: 35px;
+}
 
 #face span{
   text-transform: uppercase;
@@ -181,12 +183,13 @@ html, body, section {
   font-weight: 600;
   color: #AC4759;
   display: block;
+ 
 }
 
 #face img{
   width: 100px;
   height: auto;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
@@ -249,6 +252,14 @@ html, body, section {
   z-index: 999 !important;
 }
 
+.nopad-left{
+  padding-left: 0;
+}
+
+.nopad-right{
+  padding-right: 0;
+}
+
 #logo img{
   width: 75px;
   height: 75px;
@@ -261,6 +272,8 @@ html, body, section {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: row;
+  padding: 30px;
 }
 
 #title{
@@ -330,13 +343,13 @@ p{
 
 
 /* Tooltip container */
-.tooltip {
+.tooltipLP {
     position: relative;
     display: inline-block;
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.tooltipLP .tooltiptextLP {
     visibility: hidden;
     width: 104px;
     background-color: #555;
@@ -361,7 +374,7 @@ p{
 }
 
 /* Tooltip arrow */
-.tooltip .tooltiptext::after {
+.tooltipLP .tooltiptextLP::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -373,7 +386,50 @@ p{
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.tooltipLP:hover .tooltiptextLP {
     visibility: visible;
     opacity: 1;
+}
+
+@media only screen and (max-width : 991px) {
+  
+}
+
+@media only screen and (max-width : 768px) {
+  #page1{
+    flex-direction: column;
+  }
+
+  #title{
+    margin-top: 0;
+    font-size: 35px;
+  }
+
+  #subtitle{
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  #soon{
+    margin-bottom: 50px;
+  }
+
+  #face{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 45px;
+    text-align: center;
+  }
+
+  #face div{
+    padding-left: 0;
+  }
+
+  #social{
+    margin-bottom: 20px;
+  }
+
+  #soon{
+    margin-bottom: 0;
+  }
 }
