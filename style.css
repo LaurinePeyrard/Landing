@@ -33,6 +33,10 @@ html, body, section {
   animation: type 4s steps(60, end); 
 }
 
+.content{
+  max-width: 980px;
+}
+
 
 /* Animation */
 
@@ -141,6 +145,13 @@ html, body, section {
     -webkit-transform: scale(1);
     transform: scale(1);
   }
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 
@@ -278,8 +289,8 @@ html, body, section {
 
 #title{
   font-family: "Dosis", Arial, sans-serif;
-  margin-bottom: 0px;
-  font-size: 45px;
+  margin-bottom: 15px;
+  font-size: 40px;
   font-weight: 500;
   color: $black;
   margin-top: 20px;
@@ -293,14 +304,21 @@ html, body, section {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 1.2px;
-  margin-bottom: 45px;
+  margin-bottom: 30px;
   margin-top: 10px;
-
+  line-height: 26px;
 }
 
 
+#avatar img{
+  width: 70px;
+  height: auto;
+  margin-right: 30px;
+}
+
 #social{
-  margin-bottom: 50px;
+  text-align: center;
+  margin-top: 45px;
 }
 
 #social a{
@@ -312,13 +330,13 @@ html, body, section {
   margin-right: 0;
 }
 
-#social a img {
+#social .icon img{
   width: 25px;
  
 }
 
 
-#social a img:hover{
+#social .icon img:hover{
   -webkit-animation: bounce 0.25s forwards; /* Safari 4.0 - 8.0 */
   animation: bounce 0.25s forwards;
 }
@@ -341,6 +359,11 @@ p{
   font-family: "Dosis", Arial, sans-serif;
 }
 
+#gif img{
+   width: 300px;
+   height: auto;
+   margin-bottom: 30px;
+}
 
 /* Tooltip container */
 .tooltipLP {
@@ -435,5 +458,20 @@ p{
 
   #soon{
     margin-bottom: 10px;
+  }
+}
+
+@media only screen and (max-width : 480px) {
+  .flex{
+    display: block;
+  }
+
+  #avatar{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  #avatar img{
+    margin-right: 0;
   }
 }
