@@ -29,8 +29,8 @@ html, body, section {
 }
 
 .type{
-  -webkit-animation: type 4s steps(60, end); 
-  animation: type 4s steps(60, end); 
+  -webkit-animation: type 4s steps(60, end);
+  animation: type 4s steps(60, end);
 }
 
 .content{
@@ -61,9 +61,9 @@ html, body, section {
     -webkit-transform: scale(0.9);
     transform: scale(0.9);
   }
-} 
+}
 
-/* Standard syntax */ 
+/* Standard syntax */
 @keyframes breathe {
   0% {
     -webkit-transform: scale(0.9);
@@ -180,40 +180,27 @@ html, body, section {
   background-position: right center;
 }
 
-#face{
-  text-align: right;
-}
-
-#face div{
-  padding-left: 35px;
-}
-
-#face span{
+#avatar span{
   text-transform: uppercase;
   text-align: center;
   font-weight: 600;
   color: #AC4759;
   display: block;
- 
+
 }
 
-#face img{
-  width: 100px;
-  height: auto;
-  margin-top: 30px;
-  margin-bottom: 15px;
-}
-
-#face #peekaboo{
+#avatar #peekaboo{
   height: 0;
   opacity: 0;
   color: #2C3E50;
   font-size: 12px;
   -webkit-transition: opacity 0.15s, height 0.5s;
   transition: opacity 0.15s, height 0.5s;
+  width: 60px;
+  margin-top: 7px;
 }
 
-#face:hover #peekaboo{
+#avatar:hover #peekaboo{
   height: 18px;
   opacity: 1;
   -webkit-transition: opacity 0.15s, height 0.5s;
@@ -229,7 +216,7 @@ html, body, section {
   top: 50%;
   left: 50%;
   margin-left:-75px;
-  margin-top:-75px; 
+  margin-top:-75px;
   text-align: center;
   -webkit-animation: breathe 5s infinite; /* Safari 4.0 - 8.0 */
   animation: breathe 5s infinite;
@@ -271,6 +258,10 @@ html, body, section {
   padding-right: 0;
 }
 
+.align-center{
+  text-align: center;
+}
+
 #logo img{
   width: 75px;
   height: 75px;
@@ -289,50 +280,92 @@ html, body, section {
 
 #title{
   font-family: "Dosis", Arial, sans-serif;
-  margin-bottom: 15px;
-  font-size: 40px;
+  margin-bottom: 10px;
+  font-size: 30px;
   font-weight: 500;
-  color: $black;
   margin-top: 20px;
   letter-spacing: 1px;
-
 }
 
 #subtitle{
   font-family: "Fira Sans", Arial, sans-serif;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 1.2px;
-  margin-bottom: 30px;
-  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-top: 0px;
   line-height: 26px;
 }
 
+#avatar{
+    padding-top: 5px;
+}
 
 #avatar img{
-  width: 70px;
+  width: 60px;
   height: auto;
   margin-right: 30px;
 }
 
-#social{
-  text-align: center;
-  margin-top: 45px;
+#about p{
+  font-size: 15px;
 }
 
-#social a{
+#about span{
+  font-weight: 500;
+  font-size: 16px;
+}
+
+#about b{
+  text-transform: uppercase;
+  color: #AC4759;
+}
+
+#social{
+  text-align: center;
+}
+
+#work{
+  text-transform: uppercase;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Fira Sans", Arial, sans-serif;
+  font-weight: 500;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+#work a img{
+  width: 20px;
+  height: auto;
+  margin-left: 5px;
+}
+
+#work a img:hover{
+  -webkit-animation: bounce 0.25s forwards; /* Safari 4.0 - 8.0 */
+  animation: bounce 0.25s forwards;
+}
+
+#work a:hover{
+  color: #AC4759;
+}
+
+#social a:not(#gif){
    margin-right: 20px;
 }
 
 
-#social a:last-child {
+#social a:not(#gif):last-child {
   margin-right: 0;
 }
 
 #social .icon img{
   width: 25px;
- 
+
 }
 
 
@@ -415,7 +448,7 @@ p{
 }
 
 @media only screen and (max-width : 991px) {
-  
+
 }
 
 @media only screen and (max-width : 768px) {
@@ -439,17 +472,6 @@ p{
 
   #soon{
     margin-bottom: 50px;
-  }
-
-  #face{
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 45px;
-    text-align: center;
-  }
-
-  #face div{
-    padding-left: 0;
   }
 
   #social{
